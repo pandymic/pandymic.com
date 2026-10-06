@@ -1,6 +1,6 @@
 # pandymic.com
 
-The built, publicly served files of **[pandymic.com](https://pandymic.com/)**: Michal Pandyra, digital infrastructure specialist and independent developer.
+The built, publicly served files of **[pandymic.com](https://pandymic.com/)**: Michal Pandyra, digital infrastructure specialist and application developer.
 
 This repository is **generated**. It is produced by `npm run build` from a private source repository and
 replaced on every release, so please don't edit files or open pull requests here; changes would be overwritten.
