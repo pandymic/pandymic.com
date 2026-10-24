@@ -1,0 +1,5 @@
+# pandymic.com
+User-agent: *
+Disallow: /api/
+
+Sitemap: https://pandymic.com/sitemap.xml
