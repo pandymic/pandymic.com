@@ -1,7 +1,8 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-Y3J0J784BY');
+// An unlock link (#!/unlock/<token>, /secret/<key>/ pages) is never reported: the page view is sent without the fragment.
+gtag('config', 'G-Y3J0J784BY', location.hash.indexOf('#!/unlock/') === 0 ? { page_location: location.href.split('#')[0] } : {});
 
 // Link-click events for Google Analytics, appended to the generated /js/analytics.js (build/scripts.js). This file is real
 // JavaScript so its regular expressions are written as they run; the build replaces the three /*...*/ [] placeholders at the
