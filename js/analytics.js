@@ -45,4 +45,4 @@ gtag('config', 'G-Y3J0J784BY');
   // click: the primary button. auxclick: the middle button (a new tab).
   document.addEventListener("click", onClick);
   document.addEventListener("auxclick", onClick);
-})([{"event":"play_click","path":"^/(delve|konbini)/play/","params":{"game":"$1","mode":"$mode"}},{"event":"file_download","selector":"a[download]","ext":["vcf"]}], ["eightyfour.ca"], [[".play-dialog","dialog"],[".get-dock","sticky_bar"],[".app-hero","hero"],["#download","download_section"],[".card","card"],[".float-dock","floating_pill"],[".promo","promo"],["header","header"],["footer","footer"],["main","content"]]);
+})([{"event":"play_click","path":"^/(delve|konbini)/play/","params":{"game":"$1","mode":"$mode"}},{"event":"cta_click","path":"^/(delve|konbini)/$","params":{"cta":"project","project":"$1"}},{"event":"file_download","selector":"a[download]","ext":["vcf"]}], ["eightyfour.ca"], [[".play-dialog","dialog"],[".get-dock","sticky_bar"],[".app-hero","hero"],["#download","download_section"],[".card","card"],[".float-dock","floating_pill"],[".promo","promo"],["header","header"],["footer","footer"],["main","content"]]);
