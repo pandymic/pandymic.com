@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "title": "Send me a message",
+  "subject": "{subject}",
+  "replyTo": "email",
+  "name": "name",
+  "submit": "Send",
+  "fields": [
+    {
+      "id": "name",
+      "type": "text",
+      "label": "Name",
+      "required": true,
+      "maxLength": 64,
+      "autocomplete": "name"
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "label": "E-mail",
+      "required": true,
+      "maxLength": 254,
+      "autocomplete": "email"
+    },
+    {
+      "id": "subject",
+      "type": "text",
+      "label": "Subject",
+      "required": true,
+      "maxLength": 128,
+      "autocomplete": "off"
+    },
+    {
+      "id": "body",
+      "type": "textarea",
+      "label": "Message",
+      "required": true,
+      "maxLength": 2048,
+      "rows": 5
+    }
+  ]
+}
