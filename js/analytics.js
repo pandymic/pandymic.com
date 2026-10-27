@@ -1,8 +1,23 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-// An unlock link (#!/unlock/<token>, /secret/<key>/ pages) is never reported: the page view is sent without the fragment.
-gtag('config', 'G-Y3J0J784BY', location.hash.indexOf('#!/unlock/') === 0 ? { page_location: location.href.split('#')[0] } : {});
+// The container loads at once, except on an unlock link (#!/unlock/<token>, /secret/<key>/ pages): the page script removes the
+// fragment (replaceState) as soon as it runs, and Google's tag reads the address when it loads, so the container waits until
+// the token is gone. If it is never removed, nothing is loaded or sent: the token never reaches Google.
+(function (w, d, id) {
+  var load = function () {
+    w.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var s = d.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtm.js?id=" + id;
+    d.head.appendChild(s);
+  };
+  if (location.hash.indexOf("#!/unlock/") !== 0) return load();
+  var t = setInterval(function () {
+    if (location.hash.indexOf("#!/unlock/") === 0) return;
+    clearInterval(t);
+    load();
+  }, 100);
+})(window, document, "GTM-TJ7BQ9");
 
 // Link-click events for Google Analytics, appended to the generated /js/analytics.js (build/scripts.js). This file is real
 // JavaScript so its regular expressions are written as they run; the build replaces the three /*...*/ [] placeholders at the
