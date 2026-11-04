@@ -1,0 +1,13 @@
+#blog_content {
+  font-family: Georgia, serif;
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+#blog_content h2 {
+  font-size: 12pt;
+}
+
+#blog_content div>img {
+  border: 1px solid #CCC;
+}

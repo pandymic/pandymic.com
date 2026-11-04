@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "title": "Feedback: pandymic.com Wayback",
+  "intro": "Something broken, missing or wrong in the archive? A memory of the old site, or something you'd like taken down? Every message is read.",
+  "subject": "Wayback {type}: {summary}",
+  "replyTo": "email",
+  "name": "name",
+  "submit": "Send feedback",
+  "fields": [
+    {
+      "id": "type",
+      "type": "select",
+      "label": "What is it about?",
+      "required": true,
+      "placeholder": "Choose one",
+      "options": [
+        { "value": "broken", "label": "Something's broken" },
+        { "value": "missing", "label": "Missing or wrong information" },
+        { "value": "memory", "label": "A memory of the old site" },
+        { "value": "removal", "label": "Please take something down" },
+        { "value": "other", "label": "Something else" }
+      ]
+    },
+    {
+      "id": "page",
+      "type": "text",
+      "label": "Which page?",
+      "hint": "Filled in with the page you were on.",
+      "maxLength": 300,
+      "autocomplete": "off"
+    },
+    {
+      "id": "summary",
+      "type": "text",
+      "label": "Summary",
+      "hint": "One line.",
+      "required": true,
+      "maxLength": 120,
+      "autocomplete": "off"
+    },
+    {
+      "id": "details",
+      "type": "textarea",
+      "label": "Details",
+      "required": true,
+      "maxLength": 2000,
+      "rows": 5
+    },
+    {
+      "id": "name",
+      "type": "text",
+      "label": "Name",
+      "maxLength": 64,
+      "autocomplete": "name"
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "label": "E-mail",
+      "hint": "Only if you'd like a reply.",
+      "maxLength": 254,
+      "autocomplete": "email"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAC Amp, in Webamp</title>
+<!-- pandymic.com side quest pacamp: written for the archive. The skin is the original downloads/PAC_Amp.wsz (Wayback capture
+     2004-02-05); the player is Webamp (https://github.com/captbaritone/webamp, MIT). -->
+<style>body{margin:0;min-height:100vh;background:#b3b3b3;font:13px Verdana,sans-serif;color:#222}
+p{position:fixed;left:0;right:0;bottom:0;margin:0;padding:8px 12px;background:rgba(0,0,0,.7);color:#eee}a{color:#f99}</style>
+
+<!-- wayback-build: pandymic.com analytics (/js/analytics.js, GTM) is loaded by _vendor/wayback/badge.js, in top-level windows only -->
+<script src="../../_vendor/wayback/counter.js" defer></script>
+<script src="../../_vendor/wayback/badge.js" data-root="../../" data-build="pacamp" data-captured="" defer></script>
+</head><body>
+<div id="app"></div>
+<p><b>PAC Amp</b> by Swishiee, a Penny Arcade Winamp 2 skin (2003). Running in <a href="https://webamp.org/">Webamp</a>.
+<a href="downloads/PAC_Amp.wsz">Download the original .wsz</a> &middot; <a href="index.html">back to PAC Amp</a></p>
+<script src="../../_vendor/webamp/webamp.bundle.min.js"></script>
+<script>
+if (window.Webamp && Webamp.browserIsSupported()) {
+  new Webamp({ initialSkin: { url: 'downloads/PAC_Amp.wsz' }, initialTracks: [] }).renderWhenReady(document.getElementById('app'));
+}
+</script>
+</body></html>

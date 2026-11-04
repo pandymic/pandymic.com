@@ -1,0 +1,312 @@
+[
+ {
+  "id": "v0",
+  "title": "Temporarily down",
+  "period": "Jan 2003",
+  "folder": "v0-2003-temporarily-down",
+  "note": "\"PANDYMiC Media Network\" holding page.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "v1",
+  "title": "PANDYMiC.COM: grey shadow-table",
+  "period": "Feb 2003 – Feb 2005",
+  "folder": "v1-2003-shadow-table",
+  "note": "Cumulative: every page that existed 2003–2005, the most meaningful capture of each, in the Oct 2004 chrome (full Index / Features / Media / Tools / Links / Anime navigation, plain title).",
+  "pages": [
+   "cam.html",
+   "cam/index.html",
+   "features.articles.html",
+   "features.columns.html",
+   "features.html",
+   "features.misc.html",
+   "features.reviews.html",
+   "index.about.html",
+   "index.articles.html",
+   "index.cam.html",
+   "index.columns.html",
+   "index.contact.html",
+   "index.html",
+   "index.portfolio.html",
+   "index.resume.html",
+   "media.artwork.html",
+   "media.audio.html",
+   "media.html",
+   "media.video.html",
+   "tools.enel.html",
+   "tools.html",
+   "tools.wallpaper.html"
+  ]
+ },
+ {
+  "id": "v2",
+  "title": "Wipeout & splash",
+  "period": "Feb 2005 – May 2006",
+  "folder": "v2-2005-splash",
+  "note": "\"Wipeout...\", the long-shadow splash, then the jdic search box. The home page is the most complete state; the earlier splashes are kept under _variants/.",
+  "pages": [
+   "_variants/2005-02-11/index.html",
+   "_variants/2005-08-18/index.html",
+   "_variants/2005-10-16/index.html",
+   "_variants/2006-02-02/index.html",
+   "index.html",
+   "tools.enel.html"
+  ]
+ },
+ {
+  "id": "v3",
+  "title": "\"ws\" blue sakura layout",
+  "period": "Jun 2006 – 2010",
+  "folder": "v3-2006-sakura",
+  "note": "Cumulative: home, jdic, Lexicon, WordPress blog, Gallery2 albums and the PANDiKI wiki.",
+  "pages": [
+   "blog/2006/05/21/server-crash/index.html",
+   "blog/2006/05/index.html",
+   "blog/2008/01/03/hello-world/index.html",
+   "blog/2008/01/16/flock/index.html",
+   "blog/2008/01/24/now-with-more-xhtml-11/index.html",
+   "blog/2008/01/index.html",
+   "blog/about/index.html",
+   "blog/category/general/index.html",
+   "blog/index.html",
+   "g/index.html",
+   "g/main.php__g2_page=2.html",
+   "g/v/pax-2005/index.html",
+   "g/v/pax-2006/index.html",
+   "index.html",
+   "jdic.html",
+   "tools.enel.html",
+   "wiki/index.html",
+   "wiki/index.php/Current_events/index.html",
+   "wiki/index.php/Help_Contents/index.html",
+   "wiki/index.php/PANDiKI_About/index.html",
+   "wiki/index.php/PANDiKI_Community_Portal/index.html",
+   "wiki/index.php/PANDiKI_General_disclaimer/index.html",
+   "wiki/index.php/PANDiKI_Privacy_policy/index.html",
+   "wiki/index.php/PANDiKI_Site_support/index.html",
+   "wiki/index.php/Special_Recentchanges/index.html",
+   "wiki/w/Main_Page/index.html"
+  ]
+ },
+ {
+  "id": "v4",
+  "title": "Drupal 7 sandbox",
+  "period": "Dec 2013 – 2014",
+  "folder": "v4-2013-drupal-sandbox",
+  "note": "",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "v5",
+  "title": "WordPress placeholders",
+  "period": "2016 – 2017",
+  "folder": "v5-2016-wordpress-placeholders",
+  "note": "Single page: the most meaningful of the placeholders; the others are _variants/.",
+  "pages": [
+   "_variants/2016-01-11/index.html",
+   "_variants/2016-10-04/index.html",
+   "index.html"
+  ]
+ },
+ {
+  "id": "v6",
+  "title": "{michal pandyra}: portfolio",
+  "period": "Apr 2018 – Dec 2019",
+  "folder": "v6-2018-michal-pandyra",
+  "note": "Custom WordPress theme. Emoji URLs: 🧔 about, 👔 experience, 💼 work, 📫 contact, 📰 news.",
+  "pages": [
+   "index.html",
+   "👔/index.html",
+   "💼/index.html",
+   "📫/index.html",
+   "📰/index.html",
+   "🧔/index.html"
+  ]
+ },
+ {
+  "id": "v7",
+  "title": "\"I'll be back eventually\"",
+  "period": "2020 – Feb 2025",
+  "folder": "v7-2020-be-back-eventually",
+  "note": "Maintenance splash, with the 🕵 privacy policy and 📰 news pages.",
+  "pages": [
+   "_variants/2023-02-03/index.html",
+   "_variants/2024-09-04/index.html",
+   "_variants/2025-02-23/index.html",
+   "index.html",
+   "👔/index.html",
+   "📰/2020/hello-world/index.html",
+   "📰/index.html",
+   "🕵/index.html"
+  ]
+ },
+ {
+  "id": "v8",
+  "title": "Hello world!",
+  "period": "Mar 2025 – Sep 2026",
+  "folder": "v8-2025-hello-world",
+  "note": "",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "v9",
+  "title": "Michal Pandyra (today)",
+  "period": "Oct 2026 – now",
+  "folder": "v9-2026-today",
+  "note": "The live site, from its build output (the public pandymic/pandymic.com repo): home, /me/ and the 404 page. Analytics, /secret/ and the vCard are left out.",
+  "pages": [
+   "404.html",
+   "index.html",
+   "me/index.html"
+  ]
+ },
+ {
+  "id": "pandime",
+  "title": "PANDiME",
+  "period": "Dec 2003 – Apr 2004",
+  "folder": "side-quests/pandime",
+  "note": "anime.pandymic.com: anime fan site / announcements.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "pacamp",
+  "title": "PAC Amp & PACult",
+  "period": "Feb – Dec 2004",
+  "folder": "side-quests/pacamp",
+  "note": "pacamp.pandymic.com: a Penny Arcade Winamp skin, Swishiee's PACult buddy icons, and the PACult Secret Santa page (pandymic.com/pacss.html). swish.pandymic.com (Jan 2005) served the same page.",
+  "pages": [
+   "icons.html",
+   "index.cam.html",
+   "index.html",
+   "pacss.html"
+  ]
+ },
+ {
+  "id": "nwc",
+  "title": "Necrowombicon 2003",
+  "period": "Jun – Aug 2003",
+  "folder": "side-quests/nwc",
+  "note": "pandymic.com/nwc/: portal page for Necrowombicon 2003.",
+  "pages": [
+   "nwc/index.html"
+  ]
+ },
+ {
+  "id": "ff2000",
+  "title": "FF2000",
+  "period": "Jul 2003 – May 2004",
+  "folder": "side-quests/ff2000",
+  "note": "pandymic.com/ff2000.html: the unofficial home of Penny Arcade's FF2000.",
+  "pages": [
+   "ff2000.html"
+  ]
+ },
+ {
+  "id": "staging",
+  "title": "2025 staging page",
+  "period": "Jan 2025",
+  "folder": "side-quests/staging-2025",
+  "note": "The only page captured on an infrastructure hostname (name withheld): an early draft of the 2025 placeholder.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "geo12",
+  "title": "Geography 12 (CD-ROM)",
+  "period": "2001 – 2002",
+  "folder": "side-quests/geo12",
+  "note": "A study site on CD: bundled Apache + Perl on localhost, SSI pages and a Perl quiz. Rebuilt statically.",
+  "pages": [
+   "2001-09-10.html",
+   "2001-09-12.html",
+   "2001-09-18.html",
+   "2001-09-24.html",
+   "2001-10-03.html",
+   "2001-10-05.html",
+   "2001-10-15.html",
+   "2001-10-22.html",
+   "2001-11-07.html",
+   "2001-11-14.html",
+   "2001-11-20.html",
+   "2001-11-28.html",
+   "2001-12-06.html",
+   "2001-12-10.html",
+   "2001-12-18.html",
+   "2002-01-07.html",
+   "2002-01-07b.html",
+   "biblio.html",
+   "intro.html",
+   "toc.html",
+   "quiz/index.html",
+   "quiz/generate.html",
+   "quiz/quiz.html",
+   "index.html"
+  ]
+ },
+ {
+  "id": "bcit",
+  "title": "BCIT coursework & PANDYMiC Lite",
+  "period": "2008 – 2009",
+  "folder": "side-quests/bcit",
+  "note": "BCIT course work on the student server: a Blogger course blog (\"PANDYMiC Lite\"), the COMP 1850 site and labs. Static copy; PHP labs not rebuilt.",
+  "pages": [
+   "1850/assignment1/index.html",
+   "1850/assignment1/links.html",
+   "1850/assignment1/photos.html",
+   "1850/assignment1/project.html",
+   "1850/hw1/movie.html",
+   "1850/hw1/music.html",
+   "1920/lab12/read_post.html",
+   "1920/lab14/mpandyra/pandyra.html",
+   "1920/lab15/mpandyra/mpandyra.html",
+   "2008/03/first-post.html",
+   "2008/03/week-2-valid-xhtml.html",
+   "2008/03/week-3-predilections.html",
+   "2008/03/week-4-conditional-css.html",
+   "2008/03/week-7-query-string.html",
+   "2008/03/week-9-methodology.html",
+   "2009/05/1850-week-1-home-page.html",
+   "2009/05/1850-week-2-movie.html",
+   "2009/05/1850-week-2-music.html",
+   "2009/07/1850-assignment-1-2.html",
+   "2009/07/1850-final-assignment.html",
+   "static/1386723287277461943.html",
+   "static/2154054116716935045.html",
+   "static/4740191830226969036.html",
+   "static/50047351812646947.html",
+   "static/6983313763273426762.html",
+   "static/8188994588098153508.html",
+   "index.html"
+  ]
+ },
+ {
+  "id": "eightyfour",
+  "title": "eightyfour (studio splash page)",
+  "period": "2013",
+  "folder": "side-quests/eightyfour",
+  "note": "Mike's web studio: its Feb 2013 'brain' splash page, made to work, and the eightyfour.ca holding page.",
+  "pages": [
+   "index.html",
+   "holding/index.html"
+  ]
+ },
+ {
+  "id": "doriandmike",
+  "title": "doriandmike.ca (wedding)",
+  "period": "2011 – 2012",
+  "folder": "side-quests/doriandmike",
+  "note": "Dori & Mike's wedding site (Drupal 6), from the 2014 server backup. No guest list.",
+  "pages": [
+   "index.html"
+  ]
+ }
+]

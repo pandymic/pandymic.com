@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Lora', Georgia, Garamond, 'Times New Roman', serif;
+  font-size: 10pt;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+#ornament {
+  background: transparent url(images/ornament.png) no-repeat 0 0;
+  height: 375px;
+  position: absolute;
+  width: 318px;
+  z-index: -998;
+}
+
+#page {
+  padding: 10px;
+}
+
+#main {
+  background: transparent url(images/title-bg.png) no-repeat 0 0;
+  bottom: 100px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 600px;
+}
+
+#title {
+  height: 110px;
+  width: 600px;
+}
+
+#title a {
+  display: block;
+  height: 110px;
+  width: 600px;
+}
+
+#title a * {
+  display: none;
+}
+
+#content {
+  background: transparent url(images/content-bg.png) repeat 0 0;
+  height: 320px;
+  overflow: hidden;
+  padding: 10px;
+  width: 580px;
+}
+
+body.front-page #main {
+  height: 128px;
+}
+
+body.front-page #content {
+  display: none;
+}
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+  font-weight: normal;
+}
+
+#content h1 {
+  margin: 0 0 1em 0;
+}
+
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6,
+#content p,
+#content blockquote,
+#content form,
+#content ul,
+#content ol
+{
+  margin: 1em 0;
+}
+
+#content form div.form-item {
+  margin: 1em 0;
+}
+
+#content form div.form-item div.description {
+  font-size: 9pt;
+  font-style: italic;
+}
+
+#photo-bar {
+  background: transparent url(images/photo-bar-bg.png) repeat 0 0;
+  bottom: 10px;
+  height: 60px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+#photo-bar #photog-link {
+  color: #fff;
+  display: block;
+  font-size: 9pt;
+  float: left;
+  height: 50px;
+  margin: 0 0 0 10px;
+  padding: 10px 0 0 0;
+  text-align: center;
+  text-decoration: none;
+  width: 250px;
+}
+
+#photo-bar #photog-link span {
+  display: block;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+#photos {
+  float: right;
+  height: 60px;
+  list-style: none;
+  overflow: hidden;
+  margin: 0 10px 0 0;
+  padding: 0;
+  width: 0;
+}
+
+#photos li {
+  float: right;
+  height: 60px;
+  width: 135px;
+}
+
+#photos li a {
+  display: block;
+  float: left;
+  height: 60px;
+  opacity: 0.8;
+  width: 135px;
+}
+
+#photos li a:hover {
+  opacity: 1;
+}
+
+#border {
+  height: 0;
+}
+
+#border div {
+  background: #45254d;
+  position: absolute;
+}
+
+#border div.top {
+  height: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+#border div.right {
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 10px;
+}
+
+#border div.bottom {
+  height: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#border div.left {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 10px;
+}
+
+#bg {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -999;
+}
+
+#bg img {
+  position: relative;
+}
+
+.clear-both {
+  clear: both;
+}

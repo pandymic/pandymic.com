@@ -1,0 +1,122 @@
+  #old_page {
+    font-family: Georgia, serif;
+    line-height: 1.5;
+    margin: 0 25px;
+    voice-family: male;
+    speech-rate: medium;
+  }
+
+  #old_page h2, #old_page h3 {
+    display: block;
+    line-height: 0.7em;
+    margin: 0.68em 0;
+    padding: 0 8px;
+    border: 3px solid;
+    overflow: visible;
+  }
+
+  #old_page h2 {
+    color: #333;
+    background: #969696; url(hgrad.png) repeat-x bottom;
+    border-color: #333;
+    padding-top: 0.32em;
+  }
+
+  #old_page h3 {
+    color: #000;
+    border-color: #a7a7a7;
+    border-width: 0 0 2px 0;
+    margin-bottom: -0.268em;
+  }
+
+  #old_page p {
+    padding: 0 8px;
+  }
+
+  #old_page blockquote.intro {
+    speak: normal;
+    float: none;
+    width: auto;
+    text-align: center;
+  }
+
+  #old_page blockquote {
+    speak: none;
+    font-style: italic;
+    float: left;
+    width: 25%;
+    margin: 0 1.68em 1.68em 0;
+    text-align: justify;
+    text-indent: 0.68em;
+    background: transparent;
+    letter-spacing: 0.168em;
+  }
+
+  #old_page h3+blockquote {
+    margin: 2.3em 1.68em 1.68em 0;
+  }
+
+  #old_page h2 em.title_letter {
+    font-style: normal;
+    font-size: 2em;
+    speak: spell-out;
+    pause-before: 0;
+    pause-after: 0;
+  }
+
+  #old_page h3+p:first-letter, #old_page h3+blockquote+p:first-letter {
+    font-size: 2em;
+    float: left;
+  }
+
+  #old_page #toc {
+    margin: 35px 0;
+  }
+
+  #old_page #instructions {
+    width: 300px;
+    display: block;
+    float: right;
+    border: 1px solid #FFCC66;
+    background-color: #FFFFCC;
+    font-family: Verdana, sans-serif;
+    font-size: 8pt;
+    text-align: right;
+    position: relative;
+    top: 0.68em;
+    right: 0;
+  }
+
+  #old_page #instructions p {
+    padding: 2px 10px;
+    text-align: left;
+  }
+
+  #old_page blockquote p, #old_page span.quote {
+    quotes: "\201C" "\201D"
+  }
+
+  #old_page blockquote p:before, #old_page span.quote:before {
+    content: open-quote;
+  }
+
+  #old_page blockquote p:after, #old_page span.quote:after {
+    content: close-quote;
+  }
+
+  #old_page blockquote p:before, #old_page blockquote p:after {
+    color: #CCC;
+    font-size: 1.68em;
+    line-height: 0;
+  }
+
+  #old_page .spellme {
+    speak: spell-out;
+    pause-before: 0;
+    pause-after: 0;
+  }
+
+  #old_page code {
+    pause-before: 0;
+    pause-after: 0;
+  }

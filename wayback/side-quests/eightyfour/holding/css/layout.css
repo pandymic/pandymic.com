@@ -1,0 +1,19 @@
+body {
+  background: #fcfcfc;
+  font-family: 'Droid Serif', Georgia, serif;
+  margin: 0 7px;
+}
+
+h1 {
+  background: transparent url(../images/84.png) no-repeat 0 0;
+  color: #2d2d2d;
+  font-weight: normal;
+  height: 89px;
+  line-height: 89px;
+  margin: 0;
+  padding-left: 125px;
+}
+
+@media only screen and (max-width: 640px) {
+
+}

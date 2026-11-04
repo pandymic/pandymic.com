@@ -1,0 +1,40 @@
+<!-- pandymic.com side quest bcit: 1920/lab15/mpandyra/mpandyra.html from Mike's BCIT student site (students.signalflare.ca/mpandyra, 2008-2009); static copy by _tools/build/bcit.py -->
+<html>
+<head>
+  <title>Lab 15 - Writing Regular Expressions</title>
+
+<!-- wayback-build: pandymic.com analytics (/js/analytics.js, GTM) is loaded by _vendor/wayback/badge.js, in top-level windows only -->
+<script src="../../../../../_vendor/wayback/counter.js" defer></script>
+<script src="../../../../../_vendor/wayback/badge.js" data-root="../../../../../" data-build="bcit" data-captured="backup" defer></script>
+</head>
+<body>
+<p>Please give me some juicy details</p>
+<form action="mpandyra.php" method="GET">
+<table cellpadding="0" cellspacing="5" border="0">
+  <tr>
+    <td valign="top">Phone number:</td>
+    <td><input type="text" name="phone" /><br /><i>7 or 10 digits. Hyphens or spaces ok. Parentheses around area code only.<br />DDD-DDDD-DDDD<br />(DDD) DDD DDDD<br />DDD-DDDD<br />etc.</i></td>
+  </tr>
+  <tr>
+    <td valign="top">Car license plate:</td>
+    <td><input type="text" name="plate" /><br / ><i>Both old and new formats accepted.<br />LLLDDD<br />DDDYYY</i></td>
+  </tr>
+  <tr>
+    <td valign="top">Street address:</td>
+    <td><input type="text" name="address" /><br /><i>3 to 5 digit street number followed by street name. Must end with "Street".<br />DDD LLLLLLL Street</i></td>
+  </tr>
+  <tr>
+    <td valign="top">Birthdate:</td>
+    <td><input type="text" name="birthday" /><br /><i>MMM-DD-YYYY</i></td>
+  </tr>
+  <tr>
+    <td valign="top">Social Insurance Number:</td>
+    <td><input type="text" name="sin" /><br /><i>Exactly nine digits. Spaces ok.<br />DDD DDD DDD</i></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="submit" value="Submit" /></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

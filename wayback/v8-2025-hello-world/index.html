@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- pandymic.com v8: pandymic.com/ as captured 20260904000506 (Wayback Machine); cleaned and relinked by _tools/build/build.py -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileImage" content="https://pandymic.com/wp-content/uploads/2025/11/pandymic-favicon-300x300.avif" />
+  <title>Hello world! | pandymic.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400&display=swap" rel="stylesheet">
+  <link rel="icon" href="wp-content/uploads/2025/11/pandymic-favicon-150x150.avif" sizes="32x32" />
+  <link rel="icon" href="wp-content/uploads/2025/11/pandymic-favicon-300x300.avif" sizes="192x192" />
+  <link rel="apple-touch-icon" href="wp-content/uploads/2025/11/pandymic-favicon-300x300.avif" />
+  <style>
+      html, body {
+	              margin: 0;
+		              overflow: hidden;
+			              height: 100dvh;
+				            }
+            #bg-canvas {
+		            position: fixed;
+			            top: 0;
+				            left: 0;
+					            width: 100%;
+						            height: 100dvh;
+							            z-index: -1;
+								          }
+	          .p-container {
+			          position: absolute;
+				          top: 50%;
+					          left: 50%;
+						          transform: translate(-50%, -50%);
+							          z-index: 1;
+								        }
+		        p {
+				        font-family: 'Crimson Text', serif;
+					        font-size: 2em;
+						        text-align: center;
+							        animation: float 3s ease-in-out infinite alternate;
+								      }
+
+			      @keyframes float {
+				              0% {
+						                transform: translateY(0px);
+								        }
+					              100% {
+							                transform: translateY(-10px);
+									        }
+						            }
+  </style>
+
+<!-- wayback-build: pandymic.com analytics (/js/analytics.js, GTM) is loaded by _vendor/wayback/badge.js, in top-level windows only -->
+<script src="../_vendor/wayback/counter.js" defer></script>
+<script src="../_vendor/wayback/badge.js" data-root="../" data-build="v8" data-captured="20260904000506" defer></script>
+</head>
+
+<body>
+					          <canvas id="bg-canvas"></canvas>
+						      <div class="p-container">
+							            <p>Hello world!</p>
+								        </div>
+
+									    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+									        <script>
+											      const scene = new THREE.Scene();
+											      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+											      const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('bg-canvas'), alpha: true });
+											      renderer.setSize(window.innerWidth, window.innerHeight);
+											      renderer.setClearColor( 0xf4f4f4, 1 );
+
+											      camera.position.z = 5;
+
+											      const grayValue = Math.random() * 0.8 + 0.2;
+											      const color = new THREE.Color(grayValue, grayValue, grayValue);
+											      const geometry = new THREE.BoxGeometry(2, 2, 2);
+											      const material = new THREE.MeshBasicMaterial({ color: color, wireframe: false, transparent: true, opacity: 0.2 });
+											      const wireframeMaterial = new THREE.MeshBasicMaterial({ color: color, wireframe: true, transparent: true, opacity: 0.5});
+											      const cube = new THREE.Mesh(geometry, material);
+											      const wireframe = new THREE.Mesh(geometry, wireframeMaterial);
+											      cube.position.set(0, 0, 0);
+											      wireframe.position.set(0, 0, 0);
+
+											      scene.add(cube);
+											      scene.add(wireframe);
+
+											      let xSpeed = 0.05 / 5;
+											      let ySpeed = 0.05 / 5;
+
+											      const mouse = new THREE.Vector2();
+
+											      window.addEventListener('mousemove', (event) => {
+																							              mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+																							              mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+																							            });
+
+											      function animate() {
+																							              requestAnimationFrame(animate);
+
+																							              cube.rotation.x += 0.005;
+																							              cube.rotation.y += 0.005;
+																							              wireframe.rotation.x = cube.rotation.x;
+																							              wireframe.rotation.y = cube.rotation.y;
+
+																							              cube.position.x += xSpeed;
+																							              cube.position.y += ySpeed;
+																							              wireframe.position.x = cube.position.x;
+																							              wireframe.position.y = cube.position.y;
+
+																							              if (cube.position.x > 3 || cube.position.x < -3) {
+																																				                xSpeed = -xSpeed;
+																																				              }
+																							              if (cube.position.y > 3 || cube.position.y < -3) {
+																																				                ySpeed = -ySpeed;
+																																				              }
+
+																							              cube.rotation.x += mouse.y * 0.01;
+																							              cube.rotation.y += mouse.x * 0.01;
+																							              wireframe.rotation.x = cube.rotation.x;
+																							              wireframe.rotation.y = cube.rotation.y;
+
+																							              renderer.render(scene, camera);
+																							            }
+
+											      animate();
+
+											      window.addEventListener('resize', () => {
+																							              const newWidth = window.innerWidth;
+																							              const newHeight = window.innerHeight;
+
+																							              camera.aspect = newWidth / newHeight;
+																							              camera.updateProjectionMatrix();
+
+																							              renderer.setSize(newWidth, newHeight);
+																							            });
+
+											    </script>
+<!-- wayback-build: removed Cloudflare Web Analytics -->
+</body>
+
+</html>
+

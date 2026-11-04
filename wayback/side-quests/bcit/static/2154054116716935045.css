@@ -1,0 +1,31 @@
+    #old_page {
+      font-family: Tahoma, Verdana, Sans-serif;
+      color: #333;
+    }
+
+    #old_page h2 {
+      font-size: 125%;
+    }
+
+    #old_page a {
+      text-decoration: none;
+    }
+
+    #old_page a:hover {
+      text-decoration: underline;
+    }
+
+    #old_page a[href$=".xls"] {
+      padding-right: 40px;
+      background: url(../i/excel.gif) no-repeat right;
+    }
+
+    #old_page a[href$=".pdf"] {
+      padding-right: 40px;
+      background: url(../i/pdf.gif) no-repeat right;
+    }
+
+    #old_page a[href$=".doc"] {
+      padding-right: 40px;
+      background: url(../i/word.gif) no-repeat right;
+    }

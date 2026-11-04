@@ -1,0 +1,2 @@
+Webamp 2.3.1 (https://github.com/captbaritone/webamp), MIT License, Copyright (c) Jordan Eldredge.
+Self-hosted for the PAC Amp side quest.

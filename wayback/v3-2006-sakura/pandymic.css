@@ -1,0 +1,65 @@
+/***************************************************************************
+ *                              pandymic.css
+ *                            -----------------
+ *   begin                : Saturday, Apr 29, 2006
+ *   copyright            : (C) 2006 PANDYMiC.COM
+ *   email                : m***@pandymic.com
+ *
+ *   $Id: pandymic.css,v 1.0.0.0 2006/04/29 16:30:00 sirblack Exp $
+ *
+ *
+ ***************************************************************************/
+
+body {
+      color: #000000;
+      background: #FFFFFF url(i/ui/ws/main_bg_top.jpg) repeat-x top;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: small;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: 46px;
+      margin-bottom: 0px;
+}
+
+td.navcellout {
+            font-size: smaller;
+            padding: 4px;
+            background-color: #EFEFEF;
+            text-decoration: none;
+}
+
+td.navcellovr {
+            font-size: smaller;
+            padding: 4px;
+            background-color: #D0D0D0;
+            text-decoration: underline;
+}
+
+td.navheading {
+            color: #FFFFFF;
+            font-size: smaller;
+            font-weight: bold;
+            padding: 4px;
+            background-color: #000000;
+            border-bottom: 1px solid #000000;
+}
+
+a.nav:link {
+            color: #000080;
+            text-decoration: none;
+}
+
+a.nav:hover {
+            color: #000080;
+            text-decoration: underline;
+}
+
+a.nav:active {
+            color: #FF6600;
+            text-decoration: none;
+}
+
+a.nav:visited {
+            color: #000080;
+            text-decoration: none;
+}

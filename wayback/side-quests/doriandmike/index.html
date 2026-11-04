@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<!-- pandymic.com side quest doriandmike: doriandmike.ca (2011-2012), rebuilt from Mike's 2014 server backup (Drupal 6 theme
+     "frontend" + its database) by _tools/build/wedding.py. Guest list and RSVP tools left out. -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Doriana Coletta &amp; Michal Pandyra</title>
+<link type="text/css" rel="stylesheet" media="all" href="theme/style.css" />
+<script type="text/javascript" src="theme/jquery.js"></script>
+<style type="text/css">
+/* wayback-build: stands in for the colorbox plugin */
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;z-index:99;cursor:pointer}
+#lb img{max-width:92vw;max-height:84vh;border:6px solid #fff;box-shadow:0 8px 40px #000}
+#lb p{position:absolute;bottom:4vh;left:0;right:0;text-align:center;color:#eee;font:italic 16px Lora,Georgia,serif}
+</style>
+
+<!-- wayback-build: pandymic.com analytics (/js/analytics.js, GTM) is loaded by _vendor/wayback/badge.js, in top-level windows only -->
+<script src="../../_vendor/wayback/counter.js" defer></script>
+<script src="../../_vendor/wayback/badge.js" data-root="../../" data-build="doriandmike" data-captured="backup" defer></script>
+</head>
+<body class="front-page">
+<div id="ornament"></div>
+<div id="page">
+  <div id="main">
+  <h1 id="title"><a href="index.html" title="Dori &amp; Mike"><span>Dori &amp; Mike</span></a></h1>
+<div id="content" class="mceContentBody"><h1>Welcome</h1></div>
+</div>
+</div>
+<div id="photo-bar">
+  <a href="http://staceymalleck.com/" rel="external" id="photog-link">Photography by <span>Stacey Malleck</span></a>
+  <ul id="photos"><li><a href="photos/photo_full_view/engagement25.jpg" class="colorbox" rel="photos" title="Stairs"><img src="photos/photo_fp_thumb/engagement25.jpg" alt="Stairs" /></a></li><li><a href="photos/photo_full_view/path.jpg" class="colorbox" rel="photos" title="Path"><img src="photos/photo_fp_thumb/path.jpg" alt="Path" /></a></li><li><a href="photos/photo_full_view/gorgeous.jpg" class="colorbox" rel="photos" title="Gorgeous"><img src="photos/photo_fp_thumb/gorgeous.jpg" alt="Gorgeous" /></a></li><li><a href="photos/photo_full_view/feetsies.jpg" class="colorbox" rel="photos" title="Feetsies"><img src="photos/photo_fp_thumb/feetsies.jpg" alt="Feetsies" /></a></li><li><a href="photos/photo_full_view/boss.jpg" class="colorbox" rel="photos" title="The Boss"><img src="photos/photo_fp_thumb/boss.jpg" alt="The Boss" /></a></li><li><a href="photos/photo_full_view/cutie.jpg" class="colorbox" rel="photos" title="Cutie"><img src="photos/photo_fp_thumb/cutie.jpg" alt="Cutie" /></a></li><li><a href="photos/photo_full_view/chairs.jpg" class="colorbox" rel="photos" title="Chairs"><img src="photos/photo_fp_thumb/chairs.jpg" alt="Chairs" /></a></li></ul>
+  <div class="clear-both"></div>
+</div>
+<div id="border"><div class="top horizontal"></div><div class="right vertical"></div><div class="bottom horizontal"></div><div class="left vertical"></div></div>
+<div id="bg"><img alt="" src="theme/images/bg-loading.jpg" /></div>
+<div id="lb"><img alt="" src="" /><p></p></div>
+<script type="text/javascript">
+// general.js (2011), minus the Google webfont loader; the photo strip is shuffled like the template's ORDER BY RAND().
+var bg = document.createElement('img');
+bg.src = 'theme/images/bg.jpg';
+bg.onload = function() { document.getElementById('bg').children[0].src = bg.src; };
+(function ($) {
+  $(document).ready(function () {
+    var ul = $('#photos'), li = ul.children().get();
+    for (var i = li.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = li[i]; li[i] = li[j]; li[j] = t; }
+    $.each(li, function (_, e) { ul.append(e); });
+    $(window).resize(function () {
+      var w = $(window).width(), h = $(window).height(), r = h / w;
+      if(r > 0.7729) $('#bg img').css({width: h/0.7729+'px', height: h+'px', top: '0px', left: w-h/0.7729+'px'});
+      else $('#bg img').css({width: w+'px', height: w*0.7729+'px', top: h-w*0.7729+'px', left: '0px'});
+      if(h < 560) $('#content').css({height: 320-(560-h)+'px'});
+      else $('#content').css({height: '320px'});
+      $('#photos').css({width: w-270+'px'})
+    }).resize();
+    $('a.colorbox').click(function () {
+      $('#lb img').attr('src', this.href); $('#lb p').text(this.title); $('#lb').css('display', 'flex'); return false;
+    });
+    $('#lb').click(function () { $(this).hide(); });
+  });
+})(jQuery);
+</script>
+</body>
+</html>

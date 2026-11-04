@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eightyfour | design &amp; development</title>
+<!-- pandymic.com side quest eightyfour: the Feb 2013 "brain" splash page (temp-page.psd), made to work for the archive by
+     _tools/build/eightyfour.py. The artwork is the Photoshop composite; the experience ticker is live HTML. -->
+<style>
+html,body{margin:0;background:#e4e2de}
+.page{position:relative;width:100%;max-width:1600px;margin:0 auto;aspect-ratio:1600/1000;container-type:inline-size;
+  background:url(splash.jpg) 0 0/100% 100% no-repeat;overflow:hidden}
+.u{position:absolute;font-family:"Times New Roman",Times,Georgia,serif;line-height:1;letter-spacing:-.01em}
+.l{position:absolute;font:400 0.78cqw/1 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.22em;color:#9a8466;text-transform:uppercase;white-space:nowrap}
+.rot{transform-origin:0 0;transform:rotate(-90deg)}
+#y{left:56.4%;top:39.6%;font-size:7.35cqw;color:#404040}
+#m{left:65.6%;top:39.6%;font-size:5.6cqw;color:#555}
+#d{left:71.7%;top:39.9%;font-size:2.95cqw;color:#7d7d7d}
+#h{left:71.7%;top:44.8%;font-size:2.95cqw;color:#7d7d7d}
+#ly{left:63.9%;top:48.6%;font-size:1.05cqw;color:#8b7355}
+#lm{left:66.1%;top:47.3%;font-size:.85cqw;letter-spacing:.12em;color:#9a8466}
+#ld{left:75.0%;top:43.7%;font-size:.6cqw;letter-spacing:.08em;color:#b9a98f}
+#lh{left:75.0%;top:48.5%;font-size:.6cqw;letter-spacing:.08em;color:#b9a98f}
+.brain{position:absolute;background:0 0/100% 100% no-repeat;will-change:transform}
+.brain.top{animation:bob-a 5.2s ease-in-out infinite alternate}
+.brain.bottom{animation:bob-b 6.7s ease-in-out -2.1s infinite alternate}
+@keyframes bob-a{from{transform:translateY(-.32cqw)}to{transform:translateY(.22cqw)}}
+@keyframes bob-b{from{transform:translateY(.30cqw)}to{transform:translateY(-.20cqw)}}
+.dot{position:absolute;width:1.5cqw;height:1.5cqw;margin:-.75cqw 0 0 -.75cqw;border-radius:50%;
+  box-shadow:0 0 0 0 rgba(200,40,40,.55);animation:pulse 2.4s ease-out infinite}
+.dot:nth-of-type(2n){animation-delay:.8s} .dot:nth-of-type(3n){animation-delay:1.6s}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(200,40,40,.55)}80%{box-shadow:0 0 0 1.6cqw rgba(200,40,40,0)}100%{box-shadow:0 0 0 0 rgba(200,40,40,0)}}
+@media (prefers-reduced-motion:reduce){.dot,.brain{animation:none}}
+.foot{max-width:1600px;margin:0 auto;padding:10px 14px;font:12px/1.4 Helvetica,Arial,sans-serif;color:#777}
+.foot a{color:#c22}
+</style>
+<!-- wayback-build: pandymic.com analytics (/js/analytics.js, GTM) is loaded by _vendor/wayback/badge.js, in top-level windows only -->
+<script src="../../_vendor/wayback/counter.js" defer></script>
+<script src="../../_vendor/wayback/badge.js" data-root="../../" data-build="eightyfour" data-captured="rebuilt" defer></script>
+</head>
+<body>
+<div class="page" role="img" aria-label="eightyfour design &amp; development: a taste of what is to come">
+  <span class="u" id="y">04</span><span class="l rot" id="ly">Years</span>
+  <span class="u" id="m">04</span><span class="l" id="lm">Months</span>
+  <span class="u" id="d">23</span><span class="l rot" id="ld">Days</span>
+  <span class="u" id="h">03</span><span class="l rot" id="lh">Hours</span>
+  <div class="brain bottom" style="left:36.938%;top:81.900%;width:22.188%;aspect-ratio:355/167;background-image:url(brain-bottom.png)"></div><div class="brain top" style="left:36.125%;top:67.200%;width:22.000%;aspect-ratio:352/115;background-image:url(brain-top.png)"><i class="dot" style="left:43.466%;top:28.696%"></i><i class="dot" style="left:16.477%;top:30.435%"></i><i class="dot" style="left:78.125%;top:54.783%"></i><i class="dot" style="left:5.398%;top:79.130%"></i><i class="dot" style="left:90.057%;top:85.217%"></i></div>
+</div>
+<p class="foot">eightyfour design &amp; development, temporary page (February 2013), from Mike's Photoshop file. The experience
+ticker is live: two web developers' experience added together, one since June 20, 2002 and one since September 9, 2008.
+The one-line page eightyfour.ca really served is <a href="holding/">here</a>.</p>
+<script>
+// "We are two web developers with ... of experience": both developers' experience added together, as years, months,
+// days and hours (the sum, laid out from the earlier start date), live.
+(function () {
+  var a = new Date('2002-06-20T00:00:00'), b = new Date('2008-09-09T00:00:00'), pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  function tick() {
+    var t = Date.now(), start = a, now = new Date(a.getTime() + (t - a.getTime()) + (t - b.getTime()));
+    var y = now.getFullYear() - start.getFullYear(), m = now.getMonth() - start.getMonth();
+    var d = now.getDate() - start.getDate(), h = now.getHours() - start.getHours();
+    if (h < 0) { h += 24; d--; }
+    if (d < 0) { d += new Date(now.getFullYear(), now.getMonth(), 0).getDate(); m--; }
+    if (m < 0) { m += 12; y--; }
+    [['y', y], ['m', m], ['d', d], ['h', h]].forEach(function (p) { document.getElementById(p[0]).textContent = pad(p[1]); });
+  }
+  tick(); setInterval(tick, 60000);
+})();
+</script>
+</body></html>
