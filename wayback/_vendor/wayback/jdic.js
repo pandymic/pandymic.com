@@ -56,20 +56,20 @@
   })());
 
   // ---- romaji -> kana (Hepburn and kunrei, enough for typing a search) ----
-  const KANA = { a: "あ", i: "い", u: "う", e: "え", o: "お" };
-  const ROWS = { k: "かきくけこ", g: "がぎぐげご", s: "さしすせそ", z: "ざじずぜぞ", t: "たちつてと", d: "だぢづでど", n: "なにぬねの",
-    h: "はひふへほ", b: "ばびぶべぼ", p: "ぱぴぷぺぽ", m: "まみむめも", r: "らりるれろ", y: "や い ゆ いぇよ", w: "わゐ う ゑを", f: "ふぁふぃふふぇふぉ", j: "じゃじじゅじぇじょ", v: "ゔぁゔぃゔゔぇゔぉ" };
-  const YOON = { ky: "き", gy: "ぎ", sh: "し", sy: "し", j: "じ", zy: "じ", jy: "じ", ch: "ち", ty: "ち", cy: "ち", dy: "ぢ", ny: "に", hy: "ひ", by: "び", py: "ぴ", my: "み", ry: "り" };
-  const SMALL = { a: "ゃ", u: "ゅ", o: "ょ", e: "ぇ" };
-  const SPECIAL = { shi: "し", chi: "ち", tsu: "つ", fu: "ふ", ji: "じ", si: "し", ti: "ち", tu: "つ", hu: "ふ", zi: "じ", di: "ぢ", du: "づ", wo: "を", "n'": "ん", nn: "ん", "-": "ー" };
+  const KANA = { a: "\u3042", i: "\u3044", u: "\u3046", e: "\u3048", o: "\u304a" };
+  const ROWS = { k: "\u304b\u304d\u304f\u3051\u3053", g: "\u304c\u304e\u3050\u3052\u3054", s: "\u3055\u3057\u3059\u305b\u305d", z: "\u3056\u3058\u305a\u305c\u305e", t: "\u305f\u3061\u3064\u3066\u3068", d: "\u3060\u3062\u3065\u3067\u3069", n: "\u306a\u306b\u306c\u306d\u306e",
+    h: "\u306f\u3072\u3075\u3078\u307b", b: "\u3070\u3073\u3076\u3079\u307c", p: "\u3071\u3074\u3077\u307a\u307d", m: "\u307e\u307f\u3080\u3081\u3082", r: "\u3089\u308a\u308b\u308c\u308d", y: "\u3084 \u3044 \u3086 \u3044\u3047\u3088", w: "\u308f\u3090 \u3046 \u3091\u3092", f: "\u3075\u3041\u3075\u3043\u3075\u3075\u3047\u3075\u3049", j: "\u3058\u3083\u3058\u3058\u3085\u3058\u3047\u3058\u3087", v: "\u3094\u3041\u3094\u3043\u3094\u3094\u3047\u3094\u3049" };
+  const YOON = { ky: "\u304d", gy: "\u304e", sh: "\u3057", sy: "\u3057", j: "\u3058", zy: "\u3058", jy: "\u3058", ch: "\u3061", ty: "\u3061", cy: "\u3061", dy: "\u3062", ny: "\u306b", hy: "\u3072", by: "\u3073", py: "\u3074", my: "\u307f", ry: "\u308a" };
+  const SMALL = { a: "\u3083", u: "\u3085", o: "\u3087", e: "\u3047" };
+  const SPECIAL = { shi: "\u3057", chi: "\u3061", tsu: "\u3064", fu: "\u3075", ji: "\u3058", si: "\u3057", ti: "\u3061", tu: "\u3064", hu: "\u3075", zi: "\u3058", di: "\u3062", du: "\u3065", wo: "\u3092", "n'": "\u3093", nn: "\u3093", "-": "\u30fc" };
   const VOWELS = "aiueo";
   function toHira(s) {
     s = s.toLowerCase();
     let out = "", i = 0;
     while (i < s.length) {
       const c = s[i], n = s[i + 1];
-      if (c === n && c !== "n" && /[bcdfghjkmprstvwyz]/.test(c)) { out += "っ"; i++; continue; }            // doubled consonant
-      if (c === "n" && (n === undefined || (!VOWELS.includes(n) && n !== "y" && n !== "'" && n !== "n"))) { out += "ん"; i++; continue; }
+      if (c === n && c !== "n" && /[bcdfghjkmprstvwyz]/.test(c)) { out += "\u3063"; i++; continue; }            // doubled consonant
+      if (c === "n" && (n === undefined || (!VOWELS.includes(n) && n !== "y" && n !== "'" && n !== "n"))) { out += "\u3093"; i++; continue; }
       let hit = false;
       for (const len of [3, 2]) {
         const t = s.slice(i, i + len);
@@ -85,12 +85,12 @@
         const cell = row.length === 5 ? row[k] : row.slice(k * 2, k * 2 + 2).trim();
         if (cell) { out += cell; i += 2; continue; }
       }
-      if (c === "j" && n && SMALL[n]) { out += "じ" + SMALL[n]; i += 2; continue; }
+      if (c === "j" && n && SMALL[n]) { out += "\u3058" + SMALL[n]; i += 2; continue; }
       return null;                                                                                    // not romaji
     }
     return out;
   }
-  const toKata = (h) => h.replace(/[ぁ-ゖ]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60));
+  const toKata = (h) => h.replace(/[\u3041-\u3096]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60));
 
   // ---- search ----
   const reEsc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -147,8 +147,8 @@
     try { hl = dir === "E" && how !== "R" ? new RegExp(reEsc(q), "i") : null; } catch (e) { /* no highlight */ }
     const a = dark ? ["#440000", "#330000"] : ["#F0F0F0", "#E3E3E3"];
     return found.slice(0, LIMIT).map((w, i) => {
-      const head = esc(w.k[0] || w.r[0] || "") + (w.k.length && w.r.length ? ` <span style="opacity:.8">【${esc(w.r.join("・"))}】</span>` : "");
-      const more = w.k.length > 1 ? `<br /><small style="opacity:.7">${w.k.slice(1).map(esc).join("・")}</small>` : "";
+      const head = esc(w.k[0] || w.r[0] || "") + (w.k.length && w.r.length ? ` <span style="opacity:.8">\u3010${esc(w.r.join("\u30fb"))}\u3011</span>` : "");
+      const more = w.k.length > 1 ? `<br /><small style="opacity:.7">${w.k.slice(1).map(esc).join("\u30fb")}</small>` : "";
       const gl = w.g.map((g) => mark(g, hl)).join("; ");
       return `<tr style="background:${a[i % 2]}"><td style="width:34%;padding:3px 6px;vertical-align:top;font-size:13px;overflow-wrap:anywhere">${head}${more}</td>` +
         `<td style="padding:3px 6px;vertical-align:top;font-size:12px;overflow-wrap:anywhere">${gl}${w.p ? ' <small style="opacity:.6">(common)</small>' : ""}</td></tr>`;

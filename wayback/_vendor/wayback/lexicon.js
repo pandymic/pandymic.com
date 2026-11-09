@@ -1,6 +1,6 @@
 // pandymic.com/wayback: sirblack's English/Elvish Lexicon, in the browser.
 //
-// The PHP page answered ?enel_q=<word>[&d=…] itself; here the archived page is static and this script fills in the
+// The PHP page answered ?enel_q=<word>[&d=\u2026] itself; here the archived page is static and this script fills in the
 // results exactly where (and as) the PHP printed them. The word list (4,646 entries, the 2009 database) is fetched once,
 // gzipped, and kept in IndexedDB for later visits. The page's "phrases searched by users" counter is live
 // (pandymic/websocket counters, silently gated: see counter.js).

@@ -1,6 +1,6 @@
 // pandymic.com/wayback: the corner badge on every archived page (and the site's analytics and visit counter).
 //
-// Collapsed: a small pill, bottom left ("Wayback · v1 · 2003–2005"). Open: the version, its dates and summary, when this
+// Collapsed: a small pill, bottom left ("Wayback \u00b7 v1 \u00b7 2003\u20132005"). Open: the version, its dates and summary, when this
 // page was captured, its visits, and Back (to the timeline), Feedback (pandymic.com's own contact dialog with the
 // "wayback" form, in a transparent frame: /wayback-feedback/, see pandymic/web) and Hide. It lives in a shadow root, so the old pages' CSS can't reach it and it can't reach them.
 // Inside the timeline's preview frames it shows nothing, loads nothing and counts nothing.
@@ -104,7 +104,7 @@
     const b = bs.find((x) => x.id === BUILD);
     if (!b) return;
     const short = /^v\d/.test(b.id) ? b.id : "side quest";
-    $("label").innerHTML = `· ${esc(short)} <span class="long">· ${esc(b.period)}</span>`;
+    $("label").innerHTML = `\u00b7 ${esc(short)} <span class="long">\u00b7 ${esc(b.period)}</span>`;
     $("t").textContent = /^v\d/.test(b.id) ? `pandymic.com ${b.id}: ${b.title}` : `Side quest: ${b.title}`;
     $("when").textContent = b.period;
     $("note").textContent = b.note || "";
