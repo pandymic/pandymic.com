@@ -110,7 +110,9 @@
     $("note").textContent = b.note || "";
   }).catch(() => {});
   $("page").textContent = CAPTURED === "backup" ? "This page: rebuilt from Mike's own backups (the Internet Archive never saw it)."
-    : CAPTURED === "rebuilt" ? "This page: rebuilt for the archive." : CAPTURED ? `This page: as the Internet Archive captured it on ${fmt(CAPTURED)}.` : "";
+    : CAPTURED === "rebuilt" ? "This page: rebuilt for the archive."
+    : CAPTURED.startsWith("cc:") ? `This page: as Common Crawl captured it on ${fmt(CAPTURED.slice(3))} (the Internet Archive missed it).`
+    : CAPTURED ? `This page: as the Internet Archive captured it on ${fmt(CAPTURED)}.` : "";
 
   // Visits (pandymic/websocket counters; silently gated, see counter.js)
   const C = window.WaybackCounter;

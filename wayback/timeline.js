@@ -143,11 +143,6 @@
       centreIn(d, i); pulse(d, [i]);
       let k = 0; const w = 'love'; const iv = setInterval(() => { i.value = w.slice(0, ++k); if (k >= w.length) clearInterval(iv); }, 200);
     },
-    v3_unstyled(d) {                    // what the 2008-11 XHTML 1.1 pages look like without their lost stylesheet
-      $$('link[rel=stylesheet], style', d).forEach((e) => e.remove());
-      $$('[style]', d).forEach((e) => e.removeAttribute('style'));
-      $$('[background], [bgcolor]', d).forEach((e) => { e.removeAttribute('background'); e.removeAttribute('bgcolor'); });
-    },
     droste() {},
   };
 

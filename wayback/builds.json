@@ -62,6 +62,8 @@
   "folder": "v3-2006-sakura",
   "note": "Cumulative: home, jdic, Lexicon, WordPress blog, Gallery2 albums and the PANDiKI wiki.",
   "pages": [
+   "_variants/2006-06-10/index.html",
+   "_variants/2008-11-21/index.html",
    "blog/2006/05/21/server-crash/index.html",
    "blog/2006/05/index.html",
    "blog/2008/01/03/hello-world/index.html",
@@ -194,9 +196,24 @@
   "title": "Necrowombicon 2003",
   "period": "Jun – Aug 2003",
   "folder": "side-quests/nwc",
-  "note": "pandymic.com/nwc/: portal page for Necrowombicon 2003.",
+  "note": "pandymic.com/nwc/: portal page for Necrowombicon 2003, after the con (\"Oh snap, it's over!\"); the June countdown is _variants/2003-06-08/. The clock is rebuilt from sirblack's lighter PACult copy; add ?since for a live count-up from the moment it ran out.",
   "pages": [
+   "_variants/2003-06-08/nwc/index.html",
    "nwc/index.html"
+  ]
+ },
+ {
+  "id": "pacult-nwc",
+  "title": "Necrowombicon on PACult",
+  "period": "2001 – 2006",
+  "folder": "side-quests/pacult-nwc",
+  "note": "The Penny Arcade Cult (pacult.com), the Penny Arcade fan community Mike (sirblack) was part of from 2001 to 2007. Its Necrowombicon pages: the 2001 report, NWC 2002, and NWC 2003 with the countdown clock sirblack made. Site design by Sim, code by HappyStoner; registration lists left out.",
+  "pages": [
+   "imgs/nwcpics/index.html",
+   "nwc.php.html",
+   "nwc2.php.html",
+   "nwcplan.php.html",
+   "nwcreport.php.html"
   ]
  },
  {
@@ -207,6 +224,16 @@
   "note": "pandymic.com/ff2000.html: the unofficial home of Penny Arcade's FF2000.",
   "pages": [
    "ff2000.html"
+  ]
+ },
+ {
+  "id": "freelance",
+  "title": "\"Dear Visitor\": the 2009 freelance letter",
+  "period": "Jul 2009",
+  "folder": "side-quests/freelance-2009",
+  "note": "For a while in 2009 the home page was a letter to prospective clients (Development / Optimization / Design / Security). The Internet Archive never saw it; Common Crawl did, on 4 Jul 2009. Its stylesheet and images were not crawled.",
+  "pages": [
+   "index.html"
   ]
  },
  {
