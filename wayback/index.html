@@ -43,7 +43,7 @@
   <div class="story">
 
   <!-- ====================================================================================================== prequel -->
-  <section class="chapter" data-theme="t0">
+  <section class="chapter" id="prequel" data-theme="t0">
     <h2><small>Prequel · 2001 – 2002</small>Before pandymic.com</h2>
     <aside class="event quest" data-src="side-quests/geo12/toc.html" data-url="http://localhost:43667/notes.shtml?toc.shtml" data-when="2001 – 2002" data-frame="classic">
       <p class="q-label">⚔ Side quest</p>
@@ -56,7 +56,7 @@
   </section>
 
   <!-- ====================================================================================================== 0 -->
-  <section class="chapter" data-theme="t0">
+  <section class="chapter" id="v0" data-theme="t0">
     <h2><small>v0 · January 2003</small>Temporarily down</h2>
 
     <article class="event" data-src="v0-2003-temporarily-down/" data-url="http://www.pandymic.com/" data-when="Jan 22, 2003" data-frame="classic">
@@ -68,7 +68,7 @@
   </section>
 
   <!-- ====================================================================================================== 1 -->
-  <section class="chapter" data-theme="t1">
+  <section class="chapter" id="v1" data-theme="t1">
     <h2><small>v1 · February 2003 – February 2005</small>The grey shadow-table</h2>
 
     <article class="event" data-src="v1-2003-shadow-table/index.html" data-tweak="v1_feb2003" data-url="http://pandymic.com/" data-when="Feb 11, 2003">
@@ -196,7 +196,7 @@
   </section>
 
   <!-- ====================================================================================================== 2 -->
-  <section class="chapter" data-theme="t2">
+  <section class="chapter" id="v2" data-theme="t2">
     <h2><small>v2 · 2005 – spring 2006</small>Wipeout, and a long shadow</h2>
 
     <article class="event" data-src="v2-2005-splash/_variants/2005-02-11/" data-url="http://www.pandymic.com/" data-when="Feb 11, 2005">
@@ -235,7 +235,7 @@
   </section>
 
   <!-- ====================================================================================================== 3 -->
-  <section class="chapter" data-theme="t3">
+  <section class="chapter" id="v3" data-theme="t3">
     <h2><small>v3 · June 2006 – 2010</small>The blue sakura</h2>
 
     <article class="event" data-src="v3-2006-sakura/blog/2006/05/21/server-crash/" data-url="http://www.pandymic.com/blog/2006/05/21/server-crash/" data-when="May 21, 2006" data-frame="luna">
@@ -264,13 +264,13 @@
       <p>The Japanese dictionary from the 2005 splash got its own red room in the new layout.</p>
     </article>
 
-    <article class="event" data-src="v3-2006-sakura/g/v/pax-2005/index.html" data-url="http://www.pandymic.com/g/v/pax-2005/" data-when="Feb 29, 2008">
+    <article class="event" data-src="v3-2006-sakura/g/index.html" data-url="http://www.pandymic.com/g/v/pax-2005/" data-when="Feb 29, 2008">
       <time>2006 → 2008</time>
       <h3>Gallery2</h3>
       <p>Photo albums on Gallery2, the open-source PHP gallery of the day, embedded in the sakura layout. The archive kept
         the album pages but hardly any photos; they're back, from the original files in a 2014 server backup: PAX 2005 and
         2006, and Japan 2005 (Kyoto, Tokyo, Osaka, Hiroshima). In 2008 the gallery moved from <code>/gallery2/</code> to
-        <code>/g/</code>.</p>
+        <code>/g/</code>. The albums are private: viewing them needs an <a href="https://pandymic.com/secret/gallery/">unlock link</a>.</p>
     </article>
 
     <article class="event" data-src="v3-2006-sakura/wiki/w/Main_Page/" data-url="http://www.pandymic.com/wiki/w/Main_Page" data-when="Oct 16, 2007">
@@ -336,7 +336,7 @@
   </section>
 
   <!-- ====================================================================================================== gap -->
-  <section class="chapter" data-theme="tgap">
+  <section class="chapter" id="static" data-theme="tgap">
     <h2><small>2010 – 2013</small>Static</h2>
     <article class="event" data-src="#static" data-url="http://www.pandymic.com/" data-when="2011 – 2013" data-frame="classic">
       <time>2010 → 2013</time>
@@ -363,7 +363,7 @@
   </section>
 
   <!-- ====================================================================================================== 4 -->
-  <section class="chapter" data-theme="t4">
+  <section class="chapter" id="v4" data-theme="t4">
     <h2><small>v4 · 2013 – 2014</small>Drupal sandbox</h2>
     <article class="event" data-src="v4-2013-drupal-sandbox/" data-url="http://pandymic.com/ → http://www.pandymic.com/" data-when="Jun 23, 2013" data-frame="modern">
       <time>2013-06</time>
@@ -384,7 +384,7 @@
   </section>
 
   <!-- ====================================================================================================== 5 -->
-  <section class="chapter" data-theme="t5">
+  <section class="chapter" id="v5" data-theme="t5">
     <h2><small>v5 · 2016 – 2017</small>Hello world! (WordPress edition)</h2>
     <article class="event" data-src="v5-2016-wordpress-placeholders/_variants/2016-01-11/" data-url="http://pandymic.com/" data-when="Jan 11, 2016" data-frame="modern">
       <time>2016-01</time>
@@ -411,7 +411,7 @@
   </section>
 
   <!-- ====================================================================================================== 6 -->
-  <section class="chapter" data-theme="t6">
+  <section class="chapter" id="v6" data-theme="t6">
     <h2><small>v6 · April 2018 – 2019</small>{michal pandyra}</h2>
     <article class="event big" data-src="v6-2018-michal-pandyra/" data-url="https://pandymic.com/" data-when="Apr 24, 2018" data-frame="modern">
       <time>2018-04</time>
@@ -440,7 +440,7 @@
   </section>
 
   <!-- ====================================================================================================== 7 -->
-  <section class="chapter" data-theme="t7">
+  <section class="chapter" id="v7" data-theme="t7">
     <h2><small>v7 · November 2020 – February 2025</small>I'll be back eventually</h2>
     <article class="event big" data-src="v7-2020-be-back-eventually/" data-url="https://pandymic.com/" data-when="Nov 1, 2020" data-frame="modern">
       <time>2020-11</time>
@@ -474,7 +474,7 @@
   </section>
 
   <!-- ====================================================================================================== 8 -->
-  <section class="chapter" data-theme="t8">
+  <section class="chapter" id="v8" data-theme="t8">
     <h2><small>v8 · March 2025 – 2026</small>Hello world!</h2>
     <aside class="event quest" data-src="side-quests/staging-2025/" data-url="https://███.pandymic.com/" data-when="Jan 1, 2025" data-frame="modern">
       <p class="q-label">⚔ Side quest unlocked</p>
@@ -491,7 +491,7 @@
   </section>
 
   <!-- ====================================================================================================== 9 -->
-  <section class="chapter" data-theme="t9">
+  <section class="chapter" id="v9" data-theme="t9">
     <h2><small>v9 · October 2026 – now</small>Michal Pandyra</h2>
     <article class="event big" data-src="v9-2026-today/" data-url="https://pandymic.com/" data-when="Today" data-frame="modern">
       <time>2026-10</time>

@@ -170,7 +170,10 @@
       [front, back] = [back, front];
       shownKey = key;
     };
-    back.src = src + (tweak ? (src.includes('?') ? '&' : '?') + 'tl=' + tweak : '');
+    // location.replace(), not .src: setting an iframe's src adds an entry to the tab's history, so every card scrolled past
+    // became a Back step. The frames start at about:blank (same origin), so their location can always be replaced.
+    const url = new URL(src + (tweak ? (src.includes('?') ? '&' : '?') + 'tl=' + tweak : ''), location.href).href;
+    try { back.contentWindow.location.replace(url); } catch { back.src = url; }
   }
 
   // "No signal" for 2010-2013
@@ -191,6 +194,10 @@
 
   // ------------------------------------------------------------------ events
   const events = $$('.event');
+  const chapters = $$('.chapter');
+  // leave the address alone until the browser has restored the scroll position (Back) or jumped to #chapter
+  let settled = false;
+  addEventListener('load', () => setTimeout(() => { settled = true; }, 300));
   let active = null, petalTimer = 0;
   function activate(ev) {
     if (ev === active) return;
@@ -198,6 +205,12 @@
     active = ev; ev.classList.add('active');
     const ch = ev.closest('.chapter');
     document.body.dataset.theme = ch.dataset.theme;
+    // the address follows the chapter (#v3) by replacing the entry: the whole timeline stays one history entry, and a
+    // reload or a shared link opens at that chapter
+    if (!embedded && settled && ch.id) {
+      const hash = ch === chapters[0] ? '' : '#' + ch.id;
+      if (location.hash !== hash) try { history.replaceState(history.state, '', hash || location.pathname + location.search); } catch { /* sandboxed */ }
+    }
     // the frame is inherited from the nearest earlier event that set one
     let f = ev.dataset.frame;
     for (let i = events.indexOf(ev); !f && i >= 0; i--) f = events[i].dataset.frame;
@@ -255,7 +268,12 @@
 
   // the finale lists every build
   fetch('builds.json').then((r) => r.json()).then((bs) => {
-    $('.builds').innerHTML = bs.map((b) => `<li><a href="${encodeURI(b.folder)}/">${b.id}</a> ${b.title.replace(/</g, '&lt;')} <small>(${b.period})</small></li>`).join('');
+    $('.builds').innerHTML = bs.map((b) => `<li><a href="${encodeURI(b.folder)}/">${b.id}</a> ${b.title.replace(/</g, '&lt;')} <small>(${b.period})</small></li>`).join('') +
+      // the PACult forum archive holds other members' posts and cams: the LAN preview serves it (home.pandymic.com/wayback/pacult/),
+      // pandymic.com only behind a lock (/secret/pacult/: locked/pacult/ of this repository, unlocked by a mailed link)
+      (/^(home\.pandymic\.com|localhost|127\.0\.0\.1)$/.test(location.hostname)
+        ? '<li><a href="../pacult/">pacult</a> The Penny Arcade Cult forum archive and Cam Portal <small>(2001\u20132007, local)</small></li>'
+        : '<li><a href="/secret/pacult/">pacult</a> The Penny Arcade Cult forum archive and Cam Portal <small>(2001\u20132007, locked)</small></li>');
   }).catch(() => {});
 
   // hit counter, continued from the Lexicon's last count (21,431 users, Aug 2008)
